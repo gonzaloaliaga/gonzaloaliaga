@@ -1,0 +1,10 @@
+/* Divs usadas para dividir horizontalmente en tercios */
+.thirds {
+    width: 33%;
+}
+
+#header {
+    height: 90px;
+    background: linear-gradient(to left, rgb(200, 255, 255), pink);
+}
+

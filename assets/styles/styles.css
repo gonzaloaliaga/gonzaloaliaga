@@ -5,11 +5,24 @@
 
 #header {
     height: 90px;
-    background: linear-gradient(to left, rgb(200, 255, 255), pink);
+    background: #C8FFFF;
+    background: linear-gradient(39deg,rgba(200, 255, 255, 1) 45%, rgba(251, 225, 133, 1) 51%, rgba(255, 192, 203, 1) 55%);
 }
 
 #headerImg {
     height: 70px;
     max-width: 100%;
     object-fit:scale-down;
+}
+
+/* FORM */
+
+.containerFlex {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.formFiller {
+    width: 25%;
 }

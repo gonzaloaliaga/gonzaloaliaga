@@ -35,30 +35,74 @@
         <main>
             <div style="height: 1.5cm;"></div>
 
-            <!-- Login Form -->
             <div class="containerFlex">
                 <div class="formFiller"></div>
-                <div id="formBorder">
-                    <form style="margin: 2px;">
-                        <div id="formHeader">
-                        <h4>Inicio de sesión</h4>
+                <div class="formBorder">
+
+                    <!-- Login Form -->
+                    <form id="formLogin" style="margin: 2px;">
+                        <div class="formHeader">
+                        <h3>Inicio de sesión</h4>
                         </div>
-                        <div id="formBody">
-                            <div class="formLabel">
+                        <div class="formBody">
+                            <div style="padding-left: 10px; padding-right: 10px;">
                                 <div class="formDivider"></div>
 
-                                <h3>Correo electrónico</h3>
-                                <input id="inputLoginEmail" class="formInput" type="email">
+                                <h4>Correo electrónico</h3>
+                                <input id="inputLoginEmail" type="email">
                                 <div class="formDivider"></div>
-                                <h3>Contraseña</h3>
-                                <input id="inputLoginPass" class="formInput" type="password">
+                                <h4>Contraseña</h3>
+                                <input id="inputLoginPass" type="password">
 
                                 <a href="#" id="openRegister" style="padding-top: 5px;">¿No tienes una cuenta? Crea una de forma gratuita aquí.</a>
                                 
                                 <div class="formDivider"></div>
                                 <div style="text-align: center;">
-                                    <button id="buttonFormLogin">INICIAR SESIÓN</button>
+                                    <button id="buttonFormLogin" class="buttonForm">INICIAR SESIÓN</button>
                                 </div>
+                                <div class="formDivider"></div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Register Form -->
+                    <form id="formRegister" style="margin: 2px;">
+                        <div class="formHeader">
+                        <h3>Registro de usuario</h4>
+                        </div>
+                        <div class="formBody">
+                            <div style="padding-left: 10px; padding-left: 10px;">
+                                <div class="formDivider"></div>
+
+                                <h4>Nombre completo</h3>
+                                <input id="inputRegisterName" type="text">
+                                <div class="formDivider"></div>
+                                <h4>Correo</h3>
+                                <input id="inputRegisterEmail" type="email">
+                                <div class="formDivider"></div>
+                                <h4>Confirmar correo</h3>
+                                <input id="inputRegisterEmailConfirm" type="email">
+                                <div class="formDivider"></div>
+                                <h4>Contraseña</h3>
+                                <input id="inputRegisterPass" type="password">
+                                <div class="formDivider"></div>
+                                <h4>Confirmar contraseña</h3>
+                                <input id="inputRegisterPassConfirm" type="password">
+                                <div class="formDivider"></div>
+                                <h4>Teléfono (opcional)</h3>
+                                <input id="inputRegisterPhone" type="text">
+
+                                <div class="formDivider"></div>
+                                
+                                <div class="containerFlex">
+                                    <div class="halfs">
+                                        <h4>Registro de mascota</h4>
+                                    </div>
+                                    <div class="halfs">
+                                        <button id="buttonRegisterPet" class="buttonForm">AÑADIR NUEVO REGISTRO</button>
+                                    </div>
+                                </div>
+
                                 <div class="formDivider"></div>
                             </div>
                         </div>
@@ -67,10 +111,5 @@
                 <div class="formFiller"></div>
             </div>
         </main>
-        <br><br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br><br>
     </body>
 </html>

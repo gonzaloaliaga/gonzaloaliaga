@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   /* REGISTER FORM */
   const buttonRegisterPet = document.getElementById("buttonRegisterPet");
-  openRegister.addEventListener("click", function() {
+  buttonRegisterPet.addEventListener("click", function() {
     console.log("Añadir nuevo registro presionado")
   })
 

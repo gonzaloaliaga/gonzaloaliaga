@@ -15,6 +15,17 @@
     object-fit:scale-down;
 }
 
+#buttonOpenLogin {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+#openHome {
+    font-size: 20px;
+    text-align: left;
+    padding-left: 50px;
+}
+
 /* FORM */
 
 .containerFlex {
@@ -24,12 +35,12 @@
 }
 
 .formFiller {
-    width: 10%;
+    width: 15%;
 }
 
 #formBorder {
     background-color: rgb(0, 0, 0);
-    width: 80%;
+    width: 70%;
     border-radius: 10px;
 }
 
@@ -46,4 +57,23 @@
     margin-top: 2px;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+}
+
+.formLabel {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.formInput {
+    width: max-content;
+    width: 100%;
+}
+
+.formDivider {
+    height: 1cm
+}
+
+#buttonFormLogin {
+    font-size: 20px;
+    padding: 10px;
 }

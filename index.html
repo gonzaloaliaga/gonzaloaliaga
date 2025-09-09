@@ -13,19 +13,20 @@
         <!-- Import Bootstrap -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
         
+        <!-- Button Listeners -->
+        <script src="scripts/loginListeners.js"></script>
         <!-- Header -->
         <header>
             <nav class="navbar sticky-top bg-body-tertiary" style="padding: 0; padding-bottom: 8px;">
                 <div class="container-fluid" id="header">
                     <div class="thirds">
-                        <a href="#" style="font-size: 20px; text-align: left; padding-left: 50px;">HOME</a>
+                        <a href="#" id="openHome">HOME</a>
                     </div>
                     <div class="thirds" style="text-align: center;">
                         <img id="headerImg" src="assets/images/header.png">
                     </div>
                     <div class="thirds" style="text-align: right;">
-                        <button id = "buttonOpenLogin" style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);">INICIAR SESIÓN</button>
-                        <script src="scripts/loginListeners.js"></script>
+                        <button id = "buttonOpenLogin">INICIAR SESIÓN</button>
                     </div>
                 </div>
             </nav>
@@ -43,9 +44,23 @@
                         <h4>Inicio de sesión</h4>
                         </div>
                         <div id="formBody">
-                        <br><br><br><br><br><br><br><br><br>
-                        <br><br><br><br><br><br><br><br><br>
-                        <br><br><br><br><br><br><br><br><br>
+                            <div class="formLabel">
+                                <div class="formDivider"></div>
+
+                                <h3>Correo electrónico</h3>
+                                <input id="inputLoginEmail" class="formInput" type="email">
+                                <div class="formDivider"></div>
+                                <h3>Contraseña</h3>
+                                <input id="inputLoginPass" class="formInput" type="password">
+
+                                <a href="#" id="openRegister" style="padding-top: 5px;">¿No tienes una cuenta? Crea una de forma gratuita aquí.</a>
+                                
+                                <div class="formDivider"></div>
+                                <div style="text-align: center;">
+                                    <button id="buttonFormLogin">INICIAR SESIÓN</button>
+                                </div>
+                                <div class="formDivider"></div>
+                            </div>
                         </div>
                     </form>
                 </div>

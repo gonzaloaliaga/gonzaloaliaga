@@ -58,7 +58,7 @@
                                 
                                 <div class="formDivider"></div>
                                 <div style="text-align: center;">
-                                    <button id="buttonFormLogin" class="buttonForm">INICIAR SESIÓN</button>
+                                    <input type="submit" id="buttonFormLogin" class="buttonForm" value="INICIAR SESIÓN">
                                 </div>
                                 <div class="formDivider"></div>
                             </div>
@@ -71,7 +71,7 @@
                         <h3>Registro de usuario</h4>
                         </div>
                         <div class="formBody">
-                            <div style="padding-left: 10px; padding-left: 10px;">
+                            <div style="padding-left: 10px; padding-right: 10px;">
                                 <div class="formDivider"></div>
 
                                 <h4>Nombre completo</h3>
@@ -94,15 +94,46 @@
 
                                 <div class="formDivider"></div>
                                 
-                                <div class="containerFlex">
+                                <div class="containerFlex" style="align-items: center;">
                                     <div class="halfs">
                                         <h4>Registro de mascota</h4>
                                     </div>
                                     <div class="halfs">
-                                        <button id="buttonRegisterPet" class="buttonForm">AÑADIR NUEVO REGISTRO</button>
+                                        <input type="submit" id="buttonRegisterPet" class="buttonForm" value="AÑADIR NUEVO REGISTRO">
                                     </div>
                                 </div>
 
+                                <div class="formDivider"></div>
+
+                                <!-- Pet Forms -->
+                                <div id="petFormsContainer">
+                                    <!-- Empty Pet Form -->
+                                    <div class="petForm">
+                                        <form>
+                                            <h4>Nombre completo de la mascota</h3>
+                                            <input id="inputPetName" type="text">
+
+                                            <div class="formDivider"></div>
+                                            
+                                            <div class="containerFlex">
+                                                <div class="halfs">
+                                                    <h4>Seleccione el tipo de mascota:</h4>
+                                                    <select id="selectPetType" style="width: 80%;">
+                                                        <option value="cat">Gato</option>
+                                                        <option value="dog">Perro</option>
+                                                        <option value="bird">Ave</option>
+                                                        <option value="other">Otro</option>
+                                                    </select>
+                                                </div>
+                                                <div class="halfs">
+                                                    <button id="buttonDeletePet" class="buttonForm">ELIMINAR</button>
+                                                </div>
+                                            </div>
+                                            <div style="height: 0.5cm;"></div>
+                                        </form>
+                                    </div>
+                                    <div class="formDivider"></div>
+                                </div>
                                 <div class="formDivider"></div>
                             </div>
                         </div>

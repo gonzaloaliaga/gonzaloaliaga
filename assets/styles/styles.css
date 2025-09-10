@@ -65,6 +65,11 @@
     font-size: 20px;
 }
 
+.formBody input[type="submit"] {
+    width: auto;
+    border: 2px solid rgb(0, 0, 0);
+}
+
 .formDivider {
     height: 1cm
 }
@@ -83,4 +88,24 @@
 .halfs {
     width: 50%;
     text-align: center;
+}
+
+/* PET FORMS */
+
+#petFormsContainer {
+    width: 100%;
+}
+
+.petForm {
+    width: 70%;
+    margin: auto;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.petForm input {
+    width: max-content;
+    width: 100%;
+    font-size: 20px;
 }

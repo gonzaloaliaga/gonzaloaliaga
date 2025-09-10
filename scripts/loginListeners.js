@@ -30,4 +30,9 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log("Añadir nuevo registro presionado")
   })
 
+  const buttonDeletePet = document.getElementById("buttonDeletePet");
+  buttonDeletePet.addEventListener("click", function() {
+    console.log("Eliminar registro de mascota presionado")
+  })
+
 });

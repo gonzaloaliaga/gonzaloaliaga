@@ -13,6 +13,17 @@ header {
     position: sticky;
     top: 0;
     background-color: rgb(255, 245, 107);
+    overflow-x: scroll;
+}
+
+#headerContainer {
+    display: flex;
+    margin: 10px;
+    align-items: center;
+}
+
+header div {
+    flex: none;
 }
 
 footer {
@@ -21,10 +32,15 @@ footer {
     background-color: rgb(160, 160, 160);
 }
 
+#footerContainer {
+    display: flex;
+    margin: 10px;
+    align-items: center;
+}
+
 #headerButtons {
-    width: 60%;
-    margin-left: 30px;
-    margin-right: 30px;
+    min-width: 60%;
+    margin-left: 5px;
     text-align: left;
     display: flex;
     flex-direction: row;

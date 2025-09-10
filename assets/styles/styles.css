@@ -59,14 +59,16 @@
     border-bottom-right-radius: 8px;
 }
 
-.formBody input {
+.formBody input:is([type="text"], [type="email"], [type="password"]) {
     width: max-content;
     width: 100%;
     font-size: 20px;
 }
 
-.formBody input[type="submit"] {
-    width: auto;
+.buttonForm {
+    max-width: 100%;
+    font-size: 20px;
+    white-space: normal;
     border: 2px solid rgb(0, 0, 0);
 }
 
@@ -74,15 +76,10 @@
     height: 1cm
 }
 
-.buttonForm {
-    font-size: 20px;
-    padding: 10px;
-}
-
 /* REGISTER FORM */
 
 #formRegister {
-    display: non;
+    display: none;
 }
 
 .halfs {
@@ -97,7 +94,7 @@
 }
 
 .petForm {
-    width: 70%;
+    width: 80%;
     margin: auto;
     border: 2px solid rgb(0, 0, 0);
     border-radius: 10px;

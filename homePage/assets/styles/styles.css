@@ -50,9 +50,15 @@ header {
     display: flex;
     justify-content: flex-end;
 }
+#loginRegisterDivBig a {
+    font-size: 20px;
+}
 #loginRegisterDivSmall {
     width: 100%;
     display: none;
+}
+#loginRegisterDivSmall a {
+    font-size: 20px;
 }
 @media (max-width: 767px){
     #loginRegisterDivBig {
@@ -103,6 +109,21 @@ header {
     #welcomeCardImgContainer {
         width: 80%;
     }
+}
+
+#productContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-bottom: 5px;
+}
+#productContainer div {
+    display: flex; flex-direction: column; margin: 5px;
+}
+#productContainer p {
+    font-size: 20px;
 }
 
 /* FOOTER */

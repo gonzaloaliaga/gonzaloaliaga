@@ -46,13 +46,20 @@
 
         <!-- Main body -->
         <main id="homePage" style="flex-grow: 1;">
-            <div style="width: 100%; display: flex;">
-                <div style="width: 80%;"></div>
-                <div style="width: 20%; margin: 5px; display: flex; justify-content: space-evenly;">
-                    <a href="loginPage.html">Iniciar sesión</a>
-                    <a>|</a>
-                    <a href="#">Registrar usuario</a>
+
+            <div id="loginRegisterDivBig">
+                <a href="loginPage.html" style="white-space: nowrap;">Iniciar sesión</a>
+                <a style="margin: 0px 5px;">|</a>
+                <a href="#" style="white-space: nowrap;">Registrar usuario</a>
+            </div>
+            <div id="loginRegisterDivSmall">
+                <div style="width: 33%;"></div>
+                <div style="width: 33%; display: flex; flex-direction: row; justify-content: center;">
+                    <a href="loginPage.html" style="white-space: nowrap;">Iniciar sesión</a>
+                    <a style="margin: 0px 5px;">|</a>
+                    <a href="#" style="white-space: nowrap;">Registrar usuario</a>
                 </div>
+                <div style="width: 33%;"></div>
             </div>
 
             <div id="welcomeCardContainer">
@@ -60,14 +67,14 @@
                     <div id="welcomeCardBody">
                         <div>
                             <h2 style="font-family: Georgia, serif;"><strong>¡Bienvenido a ComiCommerce!</strong></h2>
-                            <p style="font-family: Georgia, serif; font-size: 20px;">Tu tienda online especializada en cómics, donde la pasión por las historietas cobra vida. Aquí encontrarás desde los clásicos que marcaron época, hasta los lanzamientos más recientes, pasando por una gran variedad de mangas y ediciones exclusivas. Compra cómodamente desde casa y retira tu pedido en nuestra tienda física, o déjate sorprender navegando nuestro amplio catálogo. ¡Descubre el universo ComiCommerce y lleva tus historias favoritas a casa!</p>
+                            <p style="font-family: Georgia, serif; font-size: 2.5dvh;">Tu tienda online especializada en cómics, donde la pasión por las historietas cobra vida. Aquí encontrarás desde los clásicos que marcaron época, hasta los lanzamientos más recientes, pasando por una gran variedad de mangas y ediciones exclusivas. Compra cómodamente desde casa y retira tu pedido en nuestra tienda física, o déjate sorprender navegando nuestro amplio catálogo. ¡Descubre el universo ComiCommerce y lleva tus historias favoritas a casa!</p>
                         </div>
                         <div>    
                             <a href="#" class="button">VER CATÁLOGO</a>
                         </div>
                     </div>
                     <div id="welcomeCardImgContainer">
-                        <img src="homePage/assets/images/welcomeCardImg.jpg" style="max-width: 100%; object-fit: scale-down;">
+                        <img src="homePage/assets/images/welcomeCardImg.jpg" style="max-width: 80%; min-width: 100%; object-fit: scale-down;">
                     </div>
                 </div>
             </div>
@@ -79,7 +86,7 @@
         <footer>
             <nav>
                 <div id="footerContainer">
-                    <div>
+                    <div style="width: 50%;">
                         <p style="font-size: 17px; margin: 0;">ComiCommerce, 2025</p>
                     </div>
                     <div id="footerLinks">

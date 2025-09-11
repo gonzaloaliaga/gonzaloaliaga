@@ -9,22 +9,42 @@ body {
     flex-direction: column;
 }
 
+/* HEADER */
+
 header {
     position: sticky;
     top: 0;
     background-color: rgb(255, 245, 107);
-    overflow-x: scroll;
 }
 
-#headerContainer {
+.headerContainer {
     display: flex;
     margin: 10px;
-    align-items: center;
+    align-items: baseline;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-header div {
-    flex: none;
+#headerButtons {
+    display: flex;
+    flex-direction: row;
 }
+
+#headerButtons a {
+    font-size: 20px;
+    margin-top: 2px;
+    font-size: 15px;
+    color: black;
+}
+
+#headerButtons p {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+
+/* FOOTER */
 
 footer {
     position: sticky;
@@ -36,20 +56,16 @@ footer {
     display: flex;
     margin: 10px;
     align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-#headerButtons {
-    min-width: 60%;
-    margin-left: 5px;
-    text-align: left;
+#footerLinks {
     display: flex;
-    flex-direction: row;
+    width: 30%;
+    justify-content: space-evenly;
 }
-#headerButtons a {
-    font-size: 20px;
-    margin-top: 2px;
-}
-#headerButtons p {
-    margin-left: 5px;
-    margin-right: 5px;
+
+#footerLinks a {
+    color: black;
 }

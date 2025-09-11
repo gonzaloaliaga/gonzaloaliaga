@@ -31,22 +31,21 @@ header {
 }
 
 #headerButtons a {
-    font-size: 20px;
     margin-top: 2px;
-    font-size: 18px;
+    font-size: 15px;
     color: black;
 }
 
 #headerButtons p {
     margin-left: 5px;
     margin-right: 5px;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 /* MAIN BODY */
 
 #loginRegisterDivBig {
-    width: 100%;
+    width: 95%;
     display: flex;
     justify-content: flex-end;
 }
@@ -54,7 +53,7 @@ header {
     font-size: 20px;
 }
 #loginRegisterDivSmall {
-    width: 100%;
+    width: 95%;
     display: none;
 }
 #loginRegisterDivSmall a {

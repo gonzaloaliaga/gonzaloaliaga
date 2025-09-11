@@ -43,6 +43,34 @@ header {
     font-size: 12px;
 }
 
+/* MAIN BODY */
+
+#welcomeCardContainer {
+    display: flex;
+    justify-content: center;
+}
+#welcomeCard {
+    width: 90%;
+    background-color: rgb(255, 245, 107);
+    display: flex;
+    flex-direction: row;
+}
+#welcomeCardBody {
+    width: 50%;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+#welcomeCardImgContainer {
+    width: 50%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 20px;
+    margin-left: 0px;
+}
 
 /* FOOTER */
 
@@ -68,4 +96,17 @@ footer {
 
 #footerLinks a {
     color: black;
+}
+
+a.button {
+    background-color: #ffffff;
+    border: 2px solid black;
+    color: rgb(0, 0, 0);
+    padding: 20px 34px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
 }

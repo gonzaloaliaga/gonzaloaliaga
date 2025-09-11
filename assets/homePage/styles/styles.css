@@ -60,7 +60,7 @@ header {
 #loginRegisterDivSmall a {
     font-size: 20px;
 }
-@media (max-width: 767px){
+@media (max-width: 767px) {
     #loginRegisterDivBig {
         display: none;
     }
@@ -95,7 +95,7 @@ header {
     margin-left: 0px;
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
     #welcomeCard {
         flex-direction: column;
         flex-wrap: wrap;
@@ -120,11 +120,23 @@ header {
     margin-bottom: 5px;
 }
 #productContainer div {
-    display: flex; flex-direction: column; margin: 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
     width: 20%;
 }
 #productContainer p {
     font-size: 20px;
+}
+#productContainer img {
+    max-width: 500px;
+    max-height: 500px;
+    object-fit: scale-down;
+}
+@media (max-width: 767px) {
+    #productContainer div {
+        width: 40%;
+    }
 }
 
 /* FOOTER */

@@ -82,5 +82,33 @@ if (producto) {
     localStorage.setItem("carrito", JSON.stringify(carrito));
 
     alert(`"${producto.nombre}" x ${cantidad} agregado al carrito`)
-  }) 
+  })
+
+} else {
+    document.getElementById("productDetails").innerHTML = `
+        <div id="productDetailsContainer">
+            <div id="imgBox">
+                <div id="imgContainer" style="align-items: center">
+                    <h1>
+                        Foto no disponible
+                    <h1>
+                </div>
+            </div>
+            <div id="textBox">
+                <div id="titleContainer">
+                    <h4>
+                        Producto no encontrado
+                    </h4>
+                    <p>
+                        
+                    </p>
+                </div>
+                <div id="descContainer">
+                    <p>
+                        Ha ocurrido un error o no se ha encontrado el producto que buscabas. Vuelve a intentarlo más tarde.
+                    </p>
+                </div>
+            </div>
+        </div>
+    `;
 }

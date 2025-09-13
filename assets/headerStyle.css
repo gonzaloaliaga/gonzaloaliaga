@@ -1,0 +1,56 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: rgb(255, 245, 107);
+}
+
+.headerContainer {
+    display: flex;
+    margin: 10px;
+    align-items: baseline;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#headerButtons {
+    display: flex;
+    flex-direction: row;
+}
+
+#headerButtons a {
+    margin-top: 2px;
+    font-size: 15px;
+    color: black;
+}
+
+#headerButtons p {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+a.button {
+    background-color: #ffffff;
+    border: 2px solid black;
+    color: rgb(0, 0, 0);
+    padding: 20px 34px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+}

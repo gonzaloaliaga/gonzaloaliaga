@@ -1,12 +1,6 @@
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
-// Datos de ejemplo (normalmente vendrían de una base de datos o JSON)
-const productos = {
-    1: { nombre: "Dungeon Meshi [Vol. 1 - 14]", imagen: "products/dunmeshi.webp", precio: "$99.990", descripcion: "Después de que su hermana fuera devorada por un dragón y habiendo perdido todas sus provisiones, Laios y su equipo están decididos a salvar a Farin antes de que sea digerida por la gran bestia. Es así como conocen a un singular enano que los introducirá al mundo gastronómico de las mazmorras: delicias elaboradas a partir de la carne de murciélagos gigantes, hongos caminantes y mandrágoras chillonas."},
-    2: {nombre: "Spider Punk (2022) [#1 - 5]", imagen: "products/spiderpunk.jpg", precio: "$124.990", descripcion: "¡SPIDER-PUNK TIENE SU PROPIA SERIE! HOBIE BROWN es EL SPIDER-PUNK ANÁRQUICO, listo para proteger TIERRA-138 con su hacha en mano y su caótica banda de héroes punk rockeros apoyándolo. NORMAN OSBORN ha muerto, pero ¿será el caos que ha creado demasiado para Spider-Punk y su pandilla? ¡Siente la emoción con CODY ZIGLAR (EL INCREÍBLE SPIDER-MAN) y JUSTIN MASON, quienes te traen la música cuando \"BANNED IN DC\" comience aquí!"}
-};
-
 // Mostrar la información del producto
 const producto = productos[id];
 if (producto) {

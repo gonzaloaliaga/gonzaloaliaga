@@ -11,35 +11,35 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>ComiCommerce</title>
 </head>
-<body>
-    <!-- Import Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <body>
+        <!-- Import Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
-    <!-- Header -->
-    <header>
-        <nav>
-            <div class="headerContainer">
-                <div style="width: 50%; text-align: left;">
-                    <h4>ComiCommerce</h4>
-                </div>
+        <!-- Header -->
+        <header>
+            <nav>
+                <div class="headerContainer">
+                    <div style="width: 50%; text-align: left;">
+                        <h4>ComiCommerce</h4>
+                    </div>
 
-                <div style="width: 50%; text-align: right;">
-                    <a href="shoppingCart.html" class="button" style="padding: 10px 15px;">Carrito</a>
+                    <div id="cartButton" style="width: 50%; text-align: right;">
+                        <a href="shoppingCart.html" class="button" style="padding: 10px 15px;">Carrito</a>
+                    </div>
                 </div>
-            </div>
-            <div class="headerContainer" style="background-color: rgb(255, 67, 67); justify-content: center; margin: 5px;">
-                <div id="headerButtons">
-                    <a href="index.html">Home</a>
-                    <p>___</p>
-                    <a href="Catalog.html">Productos</a>
-                    <p>___</p>
-                    <a href="aboutUs.html">Nosotros</a>
-                    <p>___</p>
-                    <a href="blogs.html">Blogs</a>
-                    <p>___</p>
-                    <a href="contact.html">Contacto</a>
+                <div class="headerContainer" style="background-color: rgb(255, 67, 67); justify-content: center; margin: 5px;">
+                    <div id="headerButtons">
+                        <a href="index.html">Home</a>
+                        <p>___</p>
+                        <a href="Catalog.html">Productos</a>
+                        <p>___</p>
+                        <a href="aboutUs.html">Nosotros</a>
+                        <p>___</p>
+                        <a href="blogs.html">Blogs</a>
+                        <p>___</p>
+                        <a href="contact.html">Contacto</a>
+                    </div>
                 </div>
-            </div>
             </nav>
         </header>
 
@@ -51,6 +51,7 @@
             
         </main>
         <script src="scripts/products.js"></script>
+        <script src="scripts/countProducts.js"></script>
         <script src="scripts/renderProductDetails.js"></script>
-</body>
+    </body>
 </html>

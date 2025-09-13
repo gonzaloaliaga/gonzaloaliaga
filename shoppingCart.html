@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/headerStyle.css">
     <link rel="stylesheet" href="assets/html.css">
     <link rel="stylesheet" href="products/catalog.css">
+    <link rel="stylesheet" href="assets/shoppingCart/styles/styles.css">
     <!-- Import Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>ComiCommerce</title>
@@ -23,7 +24,7 @@
                     <h4>ComiCommerce</h4>
                 </div>
 
-                <div style="width: 50%; text-align: right;">
+                <div id="cartButton" style="width: 50%; text-align: right;">
                     <a href="shoppingCart.html" class="button" style="padding: 10px 15px;">Carrito</a>
                 </div>
             </div>
@@ -44,10 +45,34 @@
         </header>
 
         <main>
-            <div>
-                
+            <div style="width: 100%; display: flex; flex-direction: column;">
+                <div style="width: 100%; display: flex; justify-content: center;">
+                    <h1 style="margin: 10px 0px">
+                        Mi carrito
+                    </h1>
+                </div>
+                <div style="width: 100%; display: flex; flex-direction: row; justify-content: center;">
+                    <div id="shoppingList" style="width: 75%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    </div>
+                    <div style="display: flex; flex-direction: column; justify-content: space-between; margin-left: 10px; border-left: 2px solid black; padding-left: 10px; margin-top: 10px; border-top: 2px solid black; padding-top: 10px;">
+                        <div id="checkout" style="width: 90%; display: flex; justify-content: space-between;">
+                        </div>
+                        <div>
+                            <p style="font-size: 15px; margin: 0;">
+                                Ingrese un cupón de descuento:
+                            </p>
+                            <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                                <input type="text" style="width: 65%; margin-right: 10px;">
+                                <button id="applyDiscount" style="width: 30%;">APLICAR</button>
+                            </div>
+                            <button id="pay" class="button" style="width: 100%; align-self: center;">PAGAR</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
-
-</body>
+        <script src="scripts/products.js"></script>
+        <script src="scripts/countProducts.js"></script>
+        <script src="scripts/renderCart.js"></script>
+    </body>
 </html>

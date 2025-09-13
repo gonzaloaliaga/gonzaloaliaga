@@ -34,7 +34,7 @@ if (producto) {
                         ${producto.nombre}
                     </h4>
                     <p>
-                        ${producto.precio}
+                        $${producto.precio.toLocaleString('es-CL')}
                     </p>
                 </div>
                 <div id="descContainer">
@@ -66,16 +66,17 @@ if (producto) {
 
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-    const index = carrito.findIndex(item => item.id);
+    const index = carrito.findIndex(item => item.id == id);
     if(index !== -1){
         carrito[index].cantidad += cantidad;
     } else {
-        carrito.push({id: id, nombre: producto.nombre, precio: producto.precio, cantidad: cantidad})
+        carrito.push({id: id, nombre: producto.nombre, imagen: producto.imagen, precio: producto.precio, cantidad: cantidad, descripcion: producto.descripcion})
     }
 
     localStorage.setItem("carrito", JSON.stringify(carrito));
 
-    alert(`"${producto.nombre}" x ${cantidad} agregado al carrito`)
+    updateCartButton();
+    alert(`"${producto.nombre}" x ${cantidad} agregado al carrito`);
   })
 
 } else {

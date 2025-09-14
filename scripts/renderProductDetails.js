@@ -87,6 +87,7 @@ if (producto) {
     localStorage.setItem("usuarioLogueado", JSON.stringify(usuarioLogueado));
 
     // actualizar la lista de todos los usuarios
+    let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
     const usuarioIndex = usuarios.findIndex(u => u.correo === usuarioLogueado.correo);
     if (usuarioIndex !== -1) {
         usuarios[usuarioIndex] = usuarioLogueado;

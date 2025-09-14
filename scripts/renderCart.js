@@ -2,6 +2,18 @@ function formatPrice(precio) {
   return "$" + Number(precio || 0).toLocaleString('es-CL');
 }
 
+function getLoggedUser(){
+  try {
+      const usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado"));
+      if (!usuarioLogueado) {
+        return;
+      }
+      return usuarioLogueado;
+  } catch(e) {
+    console.log("Ha ocurrido un error consiguiendo el usuario logueado: ", e)
+  }
+}
+
 // lee carrito de usuarioLogueado con manejo de errores
 function getCart() {
   try {
@@ -17,9 +29,15 @@ function getCart() {
 }
 
 function saveCart(cart) {
+  // Actualizar usuario logueado
+  usuarioLogueado = getLoggedUser();
   usuarioLogueado.carrito = cart;
   localStorage.setItem("usuarioLogueado", JSON.stringify(usuarioLogueado));
+
+  // Actualizar lista completa de usuarios
+  let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
   const usuarioIndex = usuarios.findIndex(u => u.correo === usuarioLogueado.correo);
+
   if (usuarioIndex !== -1) {
     usuarios[usuarioIndex] = usuarioLogueado;
     localStorage.setItem("usuarios", JSON.stringify(usuarios));

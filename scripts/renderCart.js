@@ -2,21 +2,28 @@ function formatPrice(precio) {
   return "$" + Number(precio || 0).toLocaleString('es-CL');
 }
 
-// lee carrito de localStorage con manejo de errores
+// lee carrito de usuarioLogueado con manejo de errores
 function getCart() {
   try {
-    const raw = localStorage.getItem("carrito");
-    if (!raw) return [];
-    const parsed = JSON.parse(raw);
-    return Array.isArray(parsed) ? parsed : [];
-  } catch (e) {
-    console.error("Error parseando localStorage 'carrito':", e);
-    return [];
+    const usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado"));
+    if (!usuarioLogueado || !Array.isArray(usuarioLogueado.carrito)) {
+      return [];
+    }
+    return usuarioLogueado.carrito;
+  } catch(e) {
+      console.log("Ha ocurrido un error consiguiendo el carrito del usuario logueado: ", e)
+      return [];
   }
 }
 
 function saveCart(cart) {
-  localStorage.setItem("carrito", JSON.stringify(cart));
+  usuarioLogueado.carrito = cart;
+  localStorage.setItem("usuarioLogueado", JSON.stringify(usuarioLogueado));
+  const usuarioIndex = usuarios.findIndex(u => u.correo === usuarioLogueado.correo);
+  if (usuarioIndex !== -1) {
+    usuarios[usuarioIndex] = usuarioLogueado;
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+  }
   // si tienes una función global que actualiza el header, la llamamos
   if (typeof updateCartButton === "function") updateCartButton();
 }

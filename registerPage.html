@@ -3,9 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="assets/headerStyle.css">
+    <link rel="stylesheet" href="assets/html.css">
+    <link rel="stylesheet" href="assets/registerPage/styles/styles.css">
+    <!-- Import Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>ComiCommerce</title>
 </head>
-<body>
-    registro
-</body>
+    <body>
+        <!-- Import Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        
+        <!-- Header -->
+        <header>
+            <nav>
+                <div class="headerContainer">
+                    <div style="width: 50%; text-align: left;">
+                        <h4>ComiCommerce</h4>
+                    </div>
+
+                    <div id="cartButton" style="width: 50%; text-align: right;">
+                        <a href="shoppingCart.html" class="button" style="padding: 10px 15px;">Carrito</a>
+                    </div>
+                </div>
+                <div class="headerContainer" style="background-color: rgb(255, 67, 67); justify-content: center; margin: 5px;">
+                    <div id="headerButtons">
+                        <a href="index.html">Home</a>
+                        <p>___</p>
+                        <a href="Catalog.html">Productos</a>
+                        <p>___</p>
+                        <a href="aboutUs.html">Nosotros</a>
+                        <p>___</p>
+                        <a href="blogs.html">Blogs</a>
+                        <p>___</p>
+                        <a href="contact.html">Contacto</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div style="height: 0.5cm;"></div>
+
+            <div class="container" style="width: 100%;">
+                <form class="container" id="registerForm">
+                    <h4>Registro de usuario</h4>
+                    <p>NOMBRE COMPLETO</p>
+                    <input id="inName" type="text" required></input>
+
+                    <p>CORREO</p>
+                    <input id="inEmail" type="email" required></input>
+
+                    <p>CONFIRMAR CORREO</p>
+                    <input id="inConfirmEmail" type="email" required></input>
+
+                    <p>CONTRASEÑA</p>
+                    <input id="inPass" type="text" required></input>
+
+                    <p>CONFIRMAR CONTRASEÑA</p>
+                    <input id="inConfirmPass" type="password" required></input>
+
+                    <p>TELÉFONO (opcional)</p>
+                    <input id="inPhone" type="text"></input>
+
+                    <div style="height: 1.5cm;"></div>
+
+                    <div class="container" style="width: 90; flex-direction: row; justify-content: space-evenly;">
+                        <label for="region">Región:</label>
+                        <select name="region" id="region" required>
+                            <option value="" disabled selected>-- Selecciona una región --</option>
+                            <option value="Arica y Parinacota">Arica y Parinacota</option>
+                            <option value="Tarapacá">Tarapacá</option>
+                            <option value="Antofagasta">Antofagasta</option>
+                            <option value="Atacama">Atacama</option>
+                            <option value="Coquimbo">Coquimbo</option>
+                            <option value="Valparaíso">Valparaíso</option>
+                            <option value="Metropolitana de Santiago">Metropolitana de Santiago</option>
+                            <option value="Libertador General Bernardo O'Higgins">Libertador General Bernardo O'Higgins</option>
+                            <option value="Maule">Maule</option>
+                            <option value="Ñuble">Ñuble</option>
+                            <option value="Biobío">Biobío</option>
+                            <option value="La Araucanía">La Araucanía</option>
+                            <option value="Los Ríos">Los Ríos</option>
+                            <option value="Los Lagos">Los Lagos</option>
+                            <option value="Aysén del General Carlos Ibáñez del Campo">Aysén del General Carlos Ibáñez del Campo</option>
+                            <option value="Magallanes y de la Antártica Chilena">Magallanes y de la Antártica Chilena</option>
+                        </select>
+                        <label for="comuna">Comuna:</label>
+                        <select name="comuna" id="comuna" required>
+                            <option value="" disabled selected>-- Selecciona una comuna --</option>
+                        </select>
+                    </div>
+                    <div style="min-height: 1.5cm; width: 50%;">
+                        <p id="mensaje" style="color: rgb(255, 0, 0); background-color: rgb(148, 2, 2); width: 100%; text-align: center;"></p>
+                    </div>
+                    <button type="submit" class="button">REGISTRAR</button>
+                </form>
+            </div>
+        </main>
+        <script src="scripts/registerPage/register.js"></script>
+        <script src="scripts/registerPage/comunas.js"></script>
+        <script src="scripts/registerPage/renderComuna.js"></script>
+        <script src="scripts/countProducts.js"></script>
+    </body>
 </html>

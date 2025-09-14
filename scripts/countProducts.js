@@ -1,5 +1,7 @@
 function updateCartButton(){
-    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    let usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado")) || [];
+
+    let carrito = usuarioLogueado.carrito || [];
 
     let cantidad = carrito.length;
 
@@ -10,7 +12,7 @@ function updateCartButton(){
     `;
     } else {
     document.getElementById("cartButton").innerHTML = `
-        <a href="shoppingCart.html" class="button" style="padding: 10px 15px;">Carrito (${cantidad})</a>
+        <a href="shoppingCart.html" class="button" style="padding: 10px 15px;">Carrito</a>
     `;
     }
 }

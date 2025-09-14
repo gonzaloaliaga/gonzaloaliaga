@@ -50,7 +50,7 @@ if (producto) {
                             </h4>
                             <input id="productCantidad" type="number" min="1" value="1">
                         </div>
-                        <button id="addToCart" class="button">AGREGAR AL CARRITO</button>
+                        <button id="addToCart" class="button" style="font-size: 20px; background-color: rgb(76, 185, 249); color: white;">AGREGAR AL CARRITO</button>
                     </div>
                 </div>
             </div>

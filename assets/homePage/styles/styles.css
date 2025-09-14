@@ -3,6 +3,7 @@
     width: 95%;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 #loginRegisterDivBig a {
     font-size: 20px;
@@ -94,15 +95,9 @@ footer {
     white-space: nowrap;
 }
 
-a.button {
-    background-color: #ffffff;
-    border: 2px solid black;
-    color: rgb(0, 0, 0);
-    padding: 20px 34px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    cursor: pointer;
+#buttonLogOff {
+    background-color: rgb(174, 12, 12);
+    color: white;
+    margin: 10px 5px;
+    padding: 10px 10px;
 }

@@ -1,40 +1,27 @@
 .container {
     display: flex; flex-direction: column; align-items: center;
 }
-#registerForm {
+form {
     width: 70%;
     border: 2px solid black;
     background-color: rgb(255, 245, 107);
     padding: 20px 0px;
 }
-#registerForm h4 {
+form h4 {
     width: 95%;
     text-align: left;
     background-color: rgb(231, 207, 31);
     padding: 5px 5px;
 }
-#registerForm p {
+form p {
     width: 85%;
     text-align: left;
     margin: 10px 0px;
     font-size: 20px;
 }
-#registerForm input {
+form input {
     width: 85%;
 }
 .container select {
     width: 30%;
-}
-
-.button {
-    background-color: #ffffff;
-    border: 2px solid black;
-    color: rgb(0, 0, 0);
-    padding: 15px 50px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    cursor: pointer;
 }

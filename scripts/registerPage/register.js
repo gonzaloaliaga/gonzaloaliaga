@@ -11,21 +11,16 @@ document.getElementById("registerForm").addEventListener("submit", function(even
     const telefono = document.getElementById("inPhone").value.trim();
     const region = document.getElementById("region").value.trim();
     const comuna = document.getElementById("comuna").value.trim();
-    const mensaje = document.getElementById("mensaje");
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
     // Validaciones personalizadas
     if (nombre.length < 3) {
-        mensaje.style.color = "rgb(255, 0, 0)";
-        mensaje.style.backgroundColor = "rgb(148, 2, 2)";
-        mensaje.textContent = "El nombre debe tener al menos 3 caracteres.";
+        alert("El nombre debe tener al menos 3 caracteres.");
         return;
     }
 
     if (usuarios.some(u => u.correo === correo)) {
-        mensaje.style.color = "rgb(255, 0, 0)";
-        mensaje.style.backgroundColor = "rgb(148, 2, 2)";
-        mensaje.textContent = "El correo ya está registrado.";
+        alert("El correo ya está registrado.");
         return;
     }
 
@@ -34,30 +29,22 @@ document.getElementById("registerForm").addEventListener("submit", function(even
     const correoValido = dominiosPermitidos.some(dominio => correo.endsWith(dominio));
 
     if (!correoValido) {
-        mensaje.style.color = "rgb(255, 0, 0)";
-        mensaje.style.backgroundColor = "rgb(148, 2, 2)";
-        mensaje.textContent = "El dominio del correo es inválido. Debe ser @gmail.com, @duoc.cl o @profesor.duoc.cl";
+        alert("El dominio del correo es inválido. Debe ser @gmail.com, @duoc.cl o @profesor.duoc.cl");
         return;
     }
 
     if (correo !== correoConfirm) {
-        mensaje.style.color = "rgb(255, 0, 0)";
-        mensaje.style.backgroundColor = "rgb(148, 2, 2)";
-        mensaje.textContent = "Los correos deben coincidir.";
+        alert("Los correos deben coincidir.");
         return;
     }
 
     if (password.length <= 4 || password.length >= 10) {
-        mensaje.style.color = "rgb(255, 0, 0)";
-        mensaje.style.backgroundColor = "rgb(148, 2, 2)";
-        mensaje.textContent = "La contraseña debe tener al menos 5 caracteres y menos de 10.";
+        alert("La contraseña debe tener al menos 5 caracteres y menos de 10.");
         return;
     }
 
     if (password !== passwordConfirm) {
-        mensaje.style.color = "rgb(255, 0, 0)";
-        mensaje.style.backgroundColor = "rgb(148, 2, 2)";
-        mensaje.textContent = "Las contraseñas deben coincidir.";
+        alert("Las contraseñas deben coincidir.");
         return;
     }
 
@@ -77,9 +64,7 @@ document.getElementById("registerForm").addEventListener("submit", function(even
     localStorage.setItem("usuarioLogueado", JSON.stringify(nuevoUsuario));
 
     // Si todo pasa
-    mensaje.style.color = "green";
-    mensaje.style.backgroundColor = "rgb(83, 254, 83)";
-    mensaje.textContent = "Registro exitoso. Gracias por crear tu cuenta.";
+    alert("Registro exitoso. Gracias por crear tu cuenta.");
 
-    this.reset();
+    window.location.href = "index.html";
   });

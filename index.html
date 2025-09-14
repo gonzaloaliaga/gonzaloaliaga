@@ -50,20 +50,8 @@
         <!-- Main body -->
         <main id="homePage" style="flex-grow: 1;">
 
-            <div id="loginRegisterDivBig">
-                <a href="loginPage.html" style="white-space: nowrap;">Iniciar sesión</a>
-                <a style="margin: 0px 5px;">|</a>
-                <a href="registerPage.html" style="white-space: nowrap;">Registrar usuario</a>
-            </div>
-            <div id="loginRegisterDivSmall">
-                <div style="width: 33%;"></div>
-                <div style="width: 33%; display: flex; flex-direction: row; justify-content: center; align-items: center;">
-                    <a href="loginPage.html" style="white-space: nowrap;">Iniciar sesión</a>
-                    <a style="margin: 5px 5px;">|</a>
-                    <a href="registerPage.html" style="white-space: nowrap;">Registrar usuario</a>
-                </div>
-                <div style="width: 33%;"></div>
-            </div>
+            <div id="logIn" style="width: 100%;"></div>
+            <div id="logOff" style="width: 100%; display: flex; justify-content: flex-end;"></div>
 
             <div id="welcomeCardContainer">
                 <div id="welcomeCard">
@@ -167,6 +155,7 @@
                 </div>
             </nav>
         </footer>
+        <script src="scripts/renderLogOff.js"></script>
         <script src="scripts/countProducts.js"></script>
     </body>
 </html>

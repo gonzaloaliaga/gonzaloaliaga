@@ -37,44 +37,29 @@
     </header>
     <main class="container mt-4 mb-4">
         <h1 class="text-center mb-4">Blog de ComiCommerce</h1>
-        <div class="row g-4">
-            <div class="col-md-6">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">¿Por qué leer cómics?</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">15 Septiembre 2025</h6>
-                        <p class="card-text">Descubre los beneficios de leer cómics y cómo pueden mejorar tu creatividad, imaginación y habilidades de lectura. ¡Sumérgete en mundos fantásticos!</p>
-                        <a href="#" class="btn btn-primary">Leer más</a>
-                    </div>
-                </div>
+        <div class="row mb-5">
+            <div class="col-lg-8">
+                <div id="blogsList" class="row g-4"></div>
             </div>
-            <div class="col-md-6">
-                <div class="card h-100">
+            <div class="col-lg-4">
+                <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Novedades en nuestro catálogo</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">10 Septiembre 2025</h6>
-                        <p class="card-text">Te presentamos los nuevos títulos que han llegado a ComiCommerce. ¡No te pierdas las últimas aventuras de tus personajes favoritos!</p>
-                        <a href="#" class="btn btn-primary">Leer más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Recomendaciones de la semana</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">8 Septiembre 2025</h6>
-                        <p class="card-text">Nuestro equipo selecciona los mejores cómics para ti. ¡Descubre qué leer esta semana y comparte tus opiniones en los comentarios!</p>
-                        <a href="#" class="btn btn-primary">Leer más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Eventos y lanzamientos</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">5 Septiembre 2025</h6>
-                        <p class="card-text">Entérate de los próximos eventos, lanzamientos y actividades relacionadas con el mundo del cómic. ¡Participa y gana premios exclusivos!</p>
-                        <a href="#" class="btn btn-primary">Leer más</a>
+                        <h5 class="card-title">Crear nuevo blog</h5>
+                        <form id="newBlogForm">
+                            <div class="mb-3">
+                                <label for="blogTitulo" class="form-label">Título</label>
+                                <input type="text" class="form-control" id="blogTitulo" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="blogDescripcion" class="form-label">Descripción breve</label>
+                                <input type="text" class="form-control" id="blogDescripcion" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="blogContenido" class="form-label">Contenido</label>
+                                <textarea class="form-control" id="blogContenido" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Publicar blog</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -95,5 +80,53 @@
         </nav>
     </footer>
     <script src="scripts/countProducts.js"></script>
+    <script>
+    function getBlogs() {
+        return JSON.parse(localStorage.getItem('blogs')) || [];
+    }
+    function saveBlogs(blogs) {
+        localStorage.setItem('blogs', JSON.stringify(blogs));
+    }
+    function renderBlogs() {
+        const blogs = getBlogs();
+        const container = document.getElementById('blogsList');
+        if (blogs.length === 0) {
+            container.innerHTML = '<div class="col-12"><div class="alert alert-info">No hay blogs publicados aún.</div></div>';
+            return;
+        }
+        let html = '';
+        blogs.slice().reverse().forEach(blog => {
+            html += `
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">${blog.titulo}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">${blog.fecha}</h6>
+                        <p class="card-text">${blog.descripcion}</p>
+                        <a href="blog.html?id=${blog.id}" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            `;
+        });
+        container.innerHTML = html;
+    }
+    document.getElementById('newBlogForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const titulo = document.getElementById('blogTitulo').value.trim();
+        const descripcion = document.getElementById('blogDescripcion').value.trim();
+        const contenido = document.getElementById('blogContenido').value.trim();
+        if (titulo && descripcion && contenido) {
+            const blogs = getBlogs();
+            const id = Date.now();
+            const fecha = new Date().toLocaleDateString('es-CL', { day: 'numeric', month: 'long', year: 'numeric' });
+            blogs.push({ id, titulo, descripcion, contenido, fecha });
+            saveBlogs(blogs);
+            renderBlogs();
+            this.reset();
+        }
+    });
+    renderBlogs();
+    </script>
 </body>
 </html>

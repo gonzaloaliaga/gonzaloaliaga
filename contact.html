@@ -3,9 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/headerStyle.css">
+    <link rel="stylesheet" href="assets/html.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>ComiCommerce | Contacto</title>
 </head>
 <body>
-    contacto
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <header>
+        <nav>
+            <div class="headerContainer">
+                <div style="width: 50%; text-align: left;">
+                    <h4>ComiCommerce</h4>
+                </div>
+                <div id="cartButton" style="width: 50%; text-align: right;">
+                    <a href="shoppingCart.html" class="button" style="padding: 10px 15px;">Carrito</a>
+                </div>
+            </div>
+            <div class="headerContainer" style="background-color: rgb(255, 67, 67); justify-content: center; margin: 5px;">
+                <div id="headerButtons">
+                    <a href="index.html">Home</a>
+                    <p>___</p>
+                    <a href="catalog.html">Productos</a>
+                    <p>___</p>
+                    <a href="aboutUs.html">Nosotros</a>
+                    <p>___</p>
+                    <a href="blogs.html">Blogs</a>
+                    <p>___</p>
+                    <a href="contact.html">Contacto</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container mt-4 mb-4">
+        <h1 class="text-center mb-4">Contáctanos</h1>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <form id="contactForm" class="p-4 border rounded bg-light">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="correo" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="correo" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="asunto" class="form-label">Asunto</label>
+                        <input type="text" class="form-control" id="asunto" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Enviar mensaje</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <div class="p-4 border rounded bg-light h-100">
+                    <h4>Información de contacto</h4>
+                    <ul class="list-unstyled mb-3">
+                        <li><strong>Correo:</strong> contacto@comiccommerce.cl</li>
+                        <li><strong>Teléfono:</strong> +56 9 1234 5678</li>
+                        <li><strong>Dirección:</strong> Av. Cómic 123, Santiago, Chile</li>
+                    </ul>
+                    <h5>Síguenos en redes sociales</h5>
+                    <div>
+                        <a href="#" class="btn btn-outline-primary btn-sm me-2">Instagram</a>
+                        <a href="#" class="btn btn-outline-info btn-sm me-2">Twitter</a>
+                        <a href="#" class="btn btn-outline-dark btn-sm">Facebook</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="mt-5">
+        <nav>
+            <div class="headerContainer" style="background-color: rgb(255, 67, 67); justify-content: center; margin: 5px;">
+                <div id="footerButtons">
+                    <a href="index.html">Home</a>
+                    <a href="catalog.html">Productos</a>
+                    <a href="aboutUs.html">Nosotros</a>
+                    <a href="blogs.html">Blogs</a>
+                    <a href="contact.html">Contacto</a>
+                </div>
+            </div>
+            <div class="text-center py-3">&copy; 2025 ComiCommerce</div>
+        </nav>
+    </footer>
+    <script src="scripts/countProducts.js"></script>
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('¡Gracias por contactarnos! Pronto responderemos tu mensaje.');
+        this.reset();
+    });
+    </script>
 </body>
 </html>

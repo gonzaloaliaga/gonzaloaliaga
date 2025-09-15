@@ -3,9 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/headerStyle.css">
+    <link rel="stylesheet" href="assets/html.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>ComiCommerce | Blogs</title>
 </head>
 <body>
-    blooogs
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <header>
+        <nav>
+            <div class="headerContainer">
+                <div style="width: 50%; text-align: left;">
+                    <h4>ComiCommerce</h4>
+                </div>
+                <div id="cartButton" style="width: 50%; text-align: right;">
+                    <a href="shoppingCart.html" class="button" style="padding: 10px 15px;">Carrito</a>
+                </div>
+            </div>
+            <div class="headerContainer" style="background-color: rgb(255, 67, 67); justify-content: center; margin: 5px;">
+                <div id="headerButtons">
+                    <a href="index.html">Home</a>
+                    <p>___</p>
+                    <a href="catalog.html">Productos</a>
+                    <p>___</p>
+                    <a href="aboutUs.html">Nosotros</a>
+                    <p>___</p>
+                    <a href="blogs.html">Blogs</a>
+                    <p>___</p>
+                    <a href="contact.html">Contacto</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container mt-4 mb-4">
+        <h1 class="text-center mb-4">Blog de ComiCommerce</h1>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">¿Por qué leer cómics?</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">15 Septiembre 2025</h6>
+                        <p class="card-text">Descubre los beneficios de leer cómics y cómo pueden mejorar tu creatividad, imaginación y habilidades de lectura. ¡Sumérgete en mundos fantásticos!</p>
+                        <a href="#" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Novedades en nuestro catálogo</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">10 Septiembre 2025</h6>
+                        <p class="card-text">Te presentamos los nuevos títulos que han llegado a ComiCommerce. ¡No te pierdas las últimas aventuras de tus personajes favoritos!</p>
+                        <a href="#" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Recomendaciones de la semana</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">8 Septiembre 2025</h6>
+                        <p class="card-text">Nuestro equipo selecciona los mejores cómics para ti. ¡Descubre qué leer esta semana y comparte tus opiniones en los comentarios!</p>
+                        <a href="#" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Eventos y lanzamientos</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">5 Septiembre 2025</h6>
+                        <p class="card-text">Entérate de los próximos eventos, lanzamientos y actividades relacionadas con el mundo del cómic. ¡Participa y gana premios exclusivos!</p>
+                        <a href="#" class="btn btn-primary">Leer más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="mt-5">
+        <nav>
+            <div class="headerContainer" style="background-color: rgb(255, 67, 67); justify-content: center; margin: 5px;">
+                <div id="footerButtons">
+                    <a href="index.html">Home</a>
+                    <a href="catalog.html">Productos</a>
+                    <a href="aboutUs.html">Nosotros</a>
+                    <a href="blogs.html">Blogs</a>
+                    <a href="contact.html">Contacto</a>
+                </div>
+            </div>
+            <div class="text-center py-3">&copy; 2025 ComiCommerce</div>
+        </nav>
+    </footer>
+    <script src="scripts/countProducts.js"></script>
 </body>
 </html>

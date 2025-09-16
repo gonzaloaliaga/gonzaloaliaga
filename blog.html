@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/headerStyle.css">
+    <link rel="stylesheet" href="assets/footerStyle.css">
     <link rel="stylesheet" href="assets/html.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>ComiCommerce | Blog Detalle</title>
@@ -35,7 +36,7 @@
             </div>
         </nav>
     </header>
-    <main class="container mt-5 mb-4" style="margin-top: 90px !important;">
+    <main class="container mt-5 mb-4" style="margin-top: 90px !important; flex-grow: 1;">
         <div id="blogDetailContainer" class="mb-5"></div>
         <div id="commentsSection" class="mb-5"></div>
         <div class="card mb-4">
@@ -55,84 +56,21 @@
             </div>
         </div>
     </main>
-    <footer class="mt-5">
-        <nav>
-            <div class="headerContainer" style="background-color: rgb(255, 67, 67); justify-content: center; margin: 5px;">
-                <div id="footerButtons">
-                    <a href="index.html">Home</a>
-                    <a href="catalog.html">Productos</a>
-                    <a href="aboutUs.html">Nosotros</a>
-                    <a href="blogs.html">Blogs</a>
-                    <a href="contact.html">Contacto</a>
+        <footer>
+            <nav>
+                <div id="footerContainer">
+                    <div style="width: 50%;">
+                        <p style="font-size: 17px; margin: 0;">ComiCommerce, 2025</p>
+                    </div>
+                    <div id="footerLinks">
+                        <a href="#">Políticas de privacidad</a>
+                        <a href="#">Políticas de cookies</a>
+                        <a href="#">Información legal</a>
+                    </div>
                 </div>
-            </div>
-            <div class="text-center py-3">&copy; 2025 ComiCommerce</div>
-        </nav>
-    </footer>
+            </nav>
+        </footer>
     <script src="scripts/countProducts.js"></script>
-    <script>
-    const params = new URLSearchParams(window.location.search);
-    const blogId = params.get('id');
-
-    function getBlogs() {
-        return JSON.parse(localStorage.getItem('blogs')) || [];
-    }
-
-    function renderBlogDetail() {
-        const blogs = getBlogs();
-        const blog = blogs.find(b => b.id == blogId);
-        const container = document.getElementById('blogDetailContainer');
-        if (!blog) {
-            container.innerHTML = '<div class="alert alert-danger">Blog no encontrado.</div>';
-            return;
-        }
-        container.innerHTML = `
-            <div class="card">
-                <div class="card-body">
-                    <h2 class="card-title">${blog.titulo}</h2>
-                    <h6 class="card-subtitle mb-2 text-muted">${blog.fecha}</h6>
-                    <p class="card-text">${blog.descripcion}</p>
-                    <p class="card-text">${blog.contenido}</p>
-                </div>
-            </div>
-        `;
-    }
-
-    function getComments() {
-        return JSON.parse(localStorage.getItem('comments_' + blogId)) || [];
-    }
-    function saveComment(comment) {
-        const comments = getComments();
-        comments.push(comment);
-        localStorage.setItem('comments_' + blogId, JSON.stringify(comments));
-    }
-    function renderComments() {
-        const comments = getComments();
-        const section = document.getElementById('commentsSection');
-        let html = '<h4>Comentarios</h4>';
-        if (comments.length === 0) {
-            html += '<p>No hay comentarios aún.</p>';
-        } else {
-            html += '<ul class="list-group">';
-            comments.forEach(c => {
-                html += `<li class="list-group-item"><strong>${c.nombre}:</strong> ${c.texto}</li>`;
-            });
-            html += '</ul>';
-        }
-        section.innerHTML = html;
-    }
-    document.getElementById('commentForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const nombre = document.getElementById('commentName').value.trim();
-        const texto = document.getElementById('commentText').value.trim();
-        if (nombre && texto) {
-            saveComment({ nombre, texto });
-            renderComments();
-            this.reset();
-        }
-    });
-    renderBlogDetail();
-    renderComments();
-    </script>
+    <script src="scripts/renderBlogDetail.js"></script>
 </body>
 </html>

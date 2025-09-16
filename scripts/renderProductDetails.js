@@ -57,7 +57,9 @@ if (producto) {
         </div>
     `;
 
-  document.getElementById("addToCart").addEventListener("click", function() {
+    document.title = "ComiCommerce | "+ producto.nombre;
+
+    document.getElementById("addToCart").addEventListener("click", function() {
 
     const usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado"));
 

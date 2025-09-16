@@ -3,9 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/headerStyle.css">
+    <link rel="stylesheet" href="assets/footerStyle.css">
+    <link rel="stylesheet" href="assets/html.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>ComiCommerce | Blogs</title>
 </head>
-<body>
-    blooogs
-</body>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        <header>
+            <nav>
+                <div class="headerContainer">
+                    <div style="width: 50%; text-align: left;">
+                        <h4>ComiCommerce</h4>
+                    </div>
+                    <div id="cartButton" style="width: 50%; text-align: right;">
+                        <a href="shoppingCart.html" class="button" style="padding: 10px 15px;">Carrito</a>
+                    </div>
+                </div>
+                <div class="headerContainer" style="background-color: rgb(255, 67, 67); justify-content: center; margin: 5px;">
+                    <div id="headerButtons">
+                        <a href="index.html">Home</a>
+                        <p>___</p>
+                        <a href="catalog.html">Productos</a>
+                        <p>___</p>
+                        <a href="aboutUs.html">Nosotros</a>
+                        <p>___</p>
+                        <a href="blogs.html">Blogs</a>
+                        <p>___</p>
+                        <a href="contact.html">Contacto</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="container mt-4 mb-4" style="flex-grow: 1;">
+            <h1 class="text-center mb-4">Blog de ComiCommerce</h1>
+            <div class="row mb-5">
+                <div class="col-lg-8">
+                    <div id="blogsList" class="row g-4"></div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Crear nuevo blog</h5>
+                            <form id="newBlogForm">
+                                <div class="mb-3">
+                                    <label for="blogTitulo" class="form-label">Título</label>
+                                    <input type="text" class="form-control" id="blogTitulo" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="blogDescripcion" class="form-label">Descripción breve</label>
+                                    <input type="text" class="form-control" id="blogDescripcion" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="blogContenido" class="form-label">Contenido</label>
+                                    <textarea class="form-control" id="blogContenido" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Publicar blog</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <nav>
+                <div id="footerContainer">
+                    <div style="width: 50%;">
+                        <p style="font-size: 17px; margin: 0;">ComiCommerce, 2025</p>
+                    </div>
+                    <div id="footerLinks">
+                        <a href="#">Políticas de privacidad</a>
+                        <a href="#">Políticas de cookies</a>
+                        <a href="#">Información legal</a>
+                    </div>
+                </div>
+            </nav>
+        </footer>
+        <script src="scripts/countProducts.js"></script>
+        <script src="scripts/renderBlog.js"></script>
+    </body>
 </html>

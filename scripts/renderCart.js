@@ -96,7 +96,7 @@
       const cantidad = Number(item.cantidad ?? 1);
       const precio = Number(item.precio ?? item.price ?? 0);
       const nombre = item.nombre ?? item.name ?? "Sin nombre";
-      const imagen = item.imagen ?? item.image ?? "assets/placeholder.jpg";
+      const imagen = item.imagen ?? item.image
       // Asegurar que descripcionFull sea string para evitar .length sobre undefined
       const descripcionFull = String(item.descripcion ?? item.description ?? "");
       const descripcionCorta = descripcionFull.length > 100 ? descripcionFull.slice(0, 100) + "..." : descripcionFull;

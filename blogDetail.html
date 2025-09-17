@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/headerStyle.css">
+    <link rel="stylesheet" href="assets/footerStyle.css">
+    <link rel="stylesheet" href="assets/html.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>ComiCommerce | Detalle de Blog</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <header style="z-index: 1000;">
+        <nav>
+            <div class="headerContainer">
+                <div style="width: 50%; text-align: left;">
+                    <h4>ComiCommerce</h4>
+                </div>
+                <div id="cartButton" style="width: 50%; text-align: right;">
+                    <a href="shoppingCart.html" class="button" style="padding: 10px 15px;">Carrito</a>
+                </div>
+            </div>
+            <div class="headerContainer" style="background-color: rgb(255, 67, 67); justify-content: center; margin: 5px;">
+                <div id="headerButtons">
+                    <a href="index.html">Home</a>
+                    <p>___</p>
+                    <a href="catalog.html">Productos</a>
+                    <p>___</p>
+                    <a href="aboutUs.html">Nosotros</a>
+                    <p>___</p>
+                    <a href="blogs.html">Blogs</a>
+                    <p>___</p>
+                    <a href="contact.html">Contacto</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container mt-4 mb-4" style="flex-grow: 1;">
+        <div id="blogDetailContent"></div>
+        <div class="text-center mt-4">
+            <a href="blogs.html" class="btn btn-secondary">Volver a blogs</a>
+        </div>
+    </main>
+    <footer>
+        <nav>
+            <div id="footerContainer">
+                <div style="width: 50%;">
+                    <p style="font-size: 17px; margin: 0;">ComiCommerce, 2025</p>
+                </div>
+                <div id="footerLinks">
+                    <a href="#">Políticas de privacidad</a>
+                    <a href="#">Políticas de cookies</a>
+                    <a href="#">Información legal</a>
+                </div>
+            </div>
+        </nav>
+    </footer>
+    <script>
+        // Noticias estáticas
+        const noticias = [
+            {
+                id: '1',
+                titulo: 'Novedades en el catálogo',
+                descripcion: '¡Descubre los nuevos lanzamientos de manga y cómics que han llegado a ComiCommerce este mes!',
+                contenido: `<p>Este mes hemos incorporado una selección exclusiva de títulos de manga y cómics, incluyendo ediciones limitadas y coleccionables. ¡No te pierdas los nuevos volúmenes de tus series favoritas y las novedades de autores emergentes!</p>
+                <ul>
+                    <li>Berserk Maximum Vol. 1</li>
+                    <li>Spider-Man: Miles Morales</li>
+                    <li>Jojo's Bizarre Adventure: Steel Ball Run</li>
+                    <li>¡Y muchos más!</li>
+                </ul>
+                <p>Visita nuestro <a href='catalog.html'>catálogo</a> para ver todos los productos disponibles.</p>`
+            },
+            {
+                id: '2',
+                titulo: 'Evento especial: Día del Cómic',
+                descripcion: 'Participa en nuestro evento anual con descuentos exclusivos y actividades para fans del cómic.',
+                contenido: `<p>El Día del Cómic llega a ComiCommerce con descuentos de hasta el 40% en títulos seleccionados, concursos, sorteos y charlas con autores invitados. ¡No te lo pierdas!</p>
+                <ul>
+                    <li>Descuentos en manga y cómics</li>
+                    <li>Charlas y firmas de autores</li>
+                    <li>Concurso de cosplay</li>
+                </ul>`
+            }
+        ];
+        // Obtener el id de la noticia desde la URL
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('id');
+        const noticia = noticias.find(n => n.id === id);
+        const container = document.getElementById('blogDetailContent');
+        if (noticia) {
+            container.innerHTML = `
+                <h2 class="mb-3">${noticia.titulo}</h2>
+                <h5 class="text-muted mb-4">${noticia.descripcion}</h5>
+                <div>${noticia.contenido}</div>
+            `;
+        } else {
+            container.innerHTML = `<div class="alert alert-warning">Noticia no encontrada.</div>`;
+        }
+    </script>
+</body>
+</html>

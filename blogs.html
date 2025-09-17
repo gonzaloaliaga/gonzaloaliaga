@@ -39,28 +39,25 @@
         <main class="container mt-4 mb-4" style="flex-grow: 1;">
             <h1 class="text-center mb-4">Blog de ComiCommerce</h1>
             <div class="row mb-5">
-                <div class="col-lg-8">
-                    <div id="blogsList" class="row g-4"></div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Crear nuevo blog</h5>
-                            <form id="newBlogForm">
-                                <div class="mb-3">
-                                    <label for="blogTitulo" class="form-label">Título</label>
-                                    <input type="text" class="form-control" id="blogTitulo" required>
+                <div class="col-lg-8 mx-auto">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Novedades en el catálogo</h5>
+                                    <p class="card-text">¡Descubre los nuevos lanzamientos de manga y cómics que han llegado a ComiCommerce este mes!</p>
+                                    <a href="blogDetail.html?id=1" class="btn btn-outline-primary">Ver detalle</a>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="blogDescripcion" class="form-label">Descripción breve</label>
-                                    <input type="text" class="form-control" id="blogDescripcion" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Evento especial: Día del Cómic</h5>
+                                    <p class="card-text">Participa en nuestro evento anual con descuentos exclusivos y actividades para fans del cómic.</p>
+                                    <a href="blogDetail.html?id=2" class="btn btn-outline-primary">Ver detalle</a>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="blogContenido" class="form-label">Contenido</label>
-                                    <textarea class="form-control" id="blogContenido" rows="4" required></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary w-100">Publicar blog</button>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -80,7 +77,6 @@
                 </div>
             </nav>
         </footer>
-        <script src="scripts/countProducts.js"></script>
-        <script src="scripts/renderBlog.js"></script>
+    <script src="scripts/countProducts.js"></script>
     </body>
 </html>

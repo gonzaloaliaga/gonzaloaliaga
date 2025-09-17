@@ -54,3 +54,17 @@ header {
     margin: 4px 2px;
     cursor: pointer;
 }
+
+@media (max-width: 767px) {
+    #headerButtons a {
+    margin-top: 2px;
+    font-size: 13px;
+    color: black;
+}
+
+#headerButtons p {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 10px;
+}
+}

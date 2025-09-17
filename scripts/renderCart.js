@@ -264,6 +264,7 @@
           `;
           containerBig.appendChild(div);
         }
+        location.reload();
       });
 
       // localiza el índice actual antes de modificar (por si cambian)

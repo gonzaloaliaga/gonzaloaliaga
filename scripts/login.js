@@ -12,6 +12,9 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
         localStorage.setItem("usuarioLogueado", JSON.stringify(usuario));
         window.location.href = "index.html";
     } else {
-        alert("Correo o contraseña incorrectos.");
+        mensaje.textContent = "Correo o contraseña incorrectos.";
+        mensaje.style.color = "red";
+        mensaje.style.backgroundColor = "background-color: rgb(148, 2, 2)";
+        return;
     }
 });
